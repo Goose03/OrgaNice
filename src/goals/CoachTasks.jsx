@@ -1,9 +1,9 @@
 export default function CoachTasks() {
     return (
       <>
-        <h1 className="text-3xl font-bold underline">
-            Hello world!
-        </h1>
+        <div className="bg-red-50 text-2xl">
+          <p>Hello World!</p>
+        </div>
       </>
       
     )
