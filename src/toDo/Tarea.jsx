@@ -139,8 +139,10 @@ export default function Tarea(props){
                                     <button type="submit" className="bg-bgrey text-dpurp py-2 px-4 rounded-md hover:bg-blue-600" onClick={sumbitRetro}>Submit</button>
                                 </div> 
                             : 
-                                <div>
-                                    <h1>Tarea Completada</h1>
+                                <div className='bg-mpurp text-twhite rounded-lg flex flex-col justify-center items-center p-5'>
+                                    <h1 className='text-2xl mb-5'>Tarea Completada!</h1>
+                                    <p className='mb-5'>Da Click Para Completar Entrega</p>
+                                    <button className="bg-bgrey text-dpurp py-2 px-4 rounded-md hover:bg-blue-600" onClick={sumbitRetro}>Sumbit</button>
                                 </div>
                             }
                         </form>
