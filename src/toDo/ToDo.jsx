@@ -12,7 +12,7 @@ export default function ToDo(){
     ]);
 
     
-    const [nuevaTarea, setNuevaTarea] = useState({id:1, clase:'', nombre: '', desc: '', priori: 0, fecha: '',})
+    const [nuevaTarea, setNuevaTarea] = useState({id:10, clase:'pers', nombre: '', desc: '', priori: 0, fecha: '',})
 
 
     const handleNombre = (event) =>  setNuevaTarea({...nuevaTarea, nombre: event.target.value });
@@ -29,11 +29,12 @@ export default function ToDo(){
     function sumbitTarea(event){
         event.preventDefault();
 
-        setNuevaTarea({...nuevaTarea, id:newId});
+        setNuevaTarea({...nuevaTarea, id:newId, clase:'pers'});
         setnewId(newId + 1);
+        console.log(nuevaTarea)
 
         setTareas([...Tareas, nuevaTarea]);
-        setNuevaTarea({id:0, nombre: '', desc: '', priori: 0, fecha: '' });
+        setNuevaTarea({id:newId, clase:'pers', nombre: '', desc: '', priori: 0, fecha: '' });
     }
 
     const remove = (myId) => {

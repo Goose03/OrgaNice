@@ -22,13 +22,15 @@ export default function Tarea(props){
     function sumbitRetro(event){
         event.preventDefault();
         
-        console.log(retro);
-        
-        remove(tareaObj.prop.id)
+        if(tareaObj.prop.clase == 'pers'){
+            console.log('Tarea Completada!')
+        }
+        else{
+            console.log(retro);
+        }
 
+        remove(tareaObj.prop.id);
         setRetro({dif:0, agr:0, opinion:"lorem"});
-
-        close();
     }
 
     return(
