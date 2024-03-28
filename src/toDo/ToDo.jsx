@@ -7,12 +7,12 @@ import Tarea from "./Tarea"
 
 export default function ToDo(){
 
-    const [Tareas, setTareas] = useState([{id:123, nombre:'Practica 1', desc:'Lorem', priori:2, fecha:'00/00/0000'},
-                                          {id:124, nombre:'Practica 2', desc:'Lorem', priori:3, fecha:'00/00/0000'}
+    const [Tareas, setTareas] = useState([{id:123, clase:'IMC', nombre:'Practica 1', desc:'Lorem', priori:2, fecha:'00/00/0000'},
+                                          {id:124, clase:'pers', nombre:'Practica 2', desc:'Lorem', priori:3, fecha:'00/00/0000'}
     ]);
 
     
-    const [nuevaTarea, setNuevaTarea] = useState({id:1, nombre: '', desc: '', priori: 0, fecha: '',})
+    const [nuevaTarea, setNuevaTarea] = useState({id:1, clase:'', nombre: '', desc: '', priori: 0, fecha: '',})
 
 
     const handleNombre = (event) =>  setNuevaTarea({...nuevaTarea, nombre: event.target.value });
@@ -29,7 +29,6 @@ export default function ToDo(){
     function sumbitTarea(event){
         event.preventDefault();
 
-        console.log(newId);
         setNuevaTarea({...nuevaTarea, id:newId});
         setnewId(newId + 1);
 
@@ -37,6 +36,10 @@ export default function ToDo(){
         setNuevaTarea({id:0, nombre: '', desc: '', priori: 0, fecha: '' });
     }
 
+    const remove = (myId) => {
+        const newTareas = Tareas.filter(tarea => tarea.id !== myId);
+        setTareas(newTareas);
+      };
 
     return(
         <>
@@ -50,18 +53,18 @@ export default function ToDo(){
                             <p className="text-2xl mb-4">Crea tu Propia Tarea</p>
                             
                             <p>Como Quieres Llamar a la Tarea?</p>
-                            <input className="mb-4 px-1 text-dpurp" placeholder="Tarea Matematicas" type="text" onChange={handleNombre} required />
+                            <input className="rounded-md mb-4 px-1 bg-dpurp" placeholder="Tarea Matematicas" type="text" onChange={handleNombre} required />
 
                             <p>Cual es su Descripción?</p>
-                            <textarea className="mb-4 px-1 text-dpurp resize-none" placeholder="Tarea Profe X..." type="text" onChange={handleDesc} required />
+                            <textarea className="rounded-md mb-4 px-1 h-20 bg-dpurp resize-none" placeholder="Tarea Profe X..." type="text" onChange={handleDesc} required />
 
                             <p>Cual es su Prioridad?</p>
-                            <input className="mb-4 px-1 text-dpurp w-14 text-center" placeholder="1" type="number" min="1" max="5" onChange={handlePriori} required />
+                            <input className="rounded-md mb-4 px-1 bg-dpurp w-14 text-center" placeholder="1" type="number" min="1" max="5" onChange={handlePriori} required />
 
                             <p>Cual es la Fecha de Entrega?</p>
-                            <input className="mb-4 px-1 text-dpurp" type="date" onChange={handleFecha} required />
+                            <input className="rounded-md mb-4 px-1 bg-dpurp" type="date" onChange={handleFecha} required />
                             
-                            <button type="submit" className="bg-bwhite text-dpurp py-2 px-4 rounded-md hover:bg-blue-600" >Submit</button>
+                            <button type="submit" className="bg-bgrey text-dpurp py-2 px-4 rounded-md hover:bg-blue-600" >Submit</button>
                         </form> 
                     </Popup>
                 </div>
@@ -77,7 +80,7 @@ export default function ToDo(){
                 <hr />
 
                 <div className="overflow-y-auto h-48 pr-2">
-                    {Tareas.map(tarea => ( <Tarea key={tarea.id} prop={tarea} /> ))}
+                    {Tareas.map(tarea => ( <Tarea key={tarea.id} prop={tarea} remove={remove} /> ))}
                 </div>
             </div>
         </>

@@ -15,6 +15,11 @@ export default {
       tgreen: '#698C3B', //Text Green
       tred: '#D75353',   //Text Red
     },
+    extend: {
+      fontFamily: {
+        'nanum-gothic-coding': ["Nanum Gothic Coding", "monospace"],
+      }
+    }
   },
   plugins: [],
 }
