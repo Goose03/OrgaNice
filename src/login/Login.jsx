@@ -1,7 +1,21 @@
+import './estilo.css'
 export default function Login(){
-
     return(
         <>
+    <body>
+        <header>
+            <nav class = "navegacion">
+                <ul class="menu">
+                    <li><a href="#">Opciones</a></li>
+                    <li><a href="#">Cuenta</a>
+                        <ul class="submenu">
+                            <li><a href="#">Sign in</a></li>
+                            <li><a href="#">Log in</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 <section class="bg-gray-50 dark:bg-gray-900">
   <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
       <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
@@ -42,6 +56,8 @@ export default function Login(){
       </div>
   </div>
 </section>
+</body>
+
         </>
     );
 }
