@@ -43,49 +43,49 @@ export default function Course() {
   };
 
   return (
-    <div className="bg-dpurp opacity-75 w-1/5 mx-4 text-2xl h-2/6 rounded-2xl p-3 shadow-xl text-twhite flex flex-col items-start absolute top-4 right-0">
+    <div className="bg-mpurp opacity-75 w-1/5 mx-4 text-2xl rounded-2xl p-3 shadow-xl text-twhite flex flex-col items-start absolute ">
+      
       <h1 className="mb-2">Cursos </h1>
-      <div
-        className="slider"
-        // style={{
-        //   // transform: `translateX(-${currentSlide * (100 / courseList.length)}%)`, // Original)
-
-        // }}
-      >
-        {/* Render */}
-        <div className="slider-container relative overflow-hidden">
+      
+      <div className="bg-dpurp">
+        <div className="overflow-hidden">
           <div key={currentSlide} className="slide flex items-center">
             <img
               className="w-1/3 h-fit rounded-2xl mr-3"
               src={courseList[currentSlide].imagen}
               alt="course image"
             />
-            <div className="flex flex-col max-w-2/3">
-              <h2 className="text-left font-bold text-xl">
-                {courseList[currentSlide].title}
-              </h2>
-              <p className="text-right text-base">
-                Prof. {courseList[currentSlide].prof}
-              </p>
-              <p className="text-right text-sm font-semibold">
-                Código: {courseList[currentSlide].codigoClase}
-              </p>
+
+            <div className="flex flex-col w-full">
+              <div className="h-2/3">
+                <h2 className="text-left font-bold text-xl">
+                  {courseList[currentSlide].title}
+                </h2>
+              </div>
+
+              <div className="h-1/3 align text-right">
+                <p className="text-base">
+                  Prof. {courseList[currentSlide].prof}
+                </p>
+                <p className="text-sm font-semibold">
+                  Código: {courseList[currentSlide].codigoClase}
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div
-        className="absolute top-[65%] -translate-x-0 translate-y-[50%] left-5 text-2xl rounded-full drop-shadow-lg p-2 bg-black/20 text-twhite cursor-pointer"
-        onClick={prevSlide}
-      >
-        <BsChevronCompactLeft size={30} />
-      </div>
-      <div
-        className="absolute top-[65%] -translate-x-0 translate-y-[50%] right-5 text-2xl rounded-full drop-shadow-lg p-2 bg-black/20 text-twhite cursor-pointer"
-        onClick={nextSlide}
-      >
-        <BsChevronCompactRight size={30} />
+
+      <div className="flex bg-dpurp">
+        <div onClick={prevSlide}>
+          <BsChevronCompactLeft size={30} />
+        </div>
+
+        <div onClick={nextSlide}>
+          <BsChevronCompactRight size={30} />
+        </div>
       </div>
     </div>
+      
   );
 }
