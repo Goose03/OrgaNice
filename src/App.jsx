@@ -1,3 +1,5 @@
+import CoachTasks from './goals/CoachTasks'
+
 export default function App() {
 
   return (
