@@ -43,27 +43,30 @@ export default function Course() {
   };
 
   return (
-    <div className="bg-mpurp opacity-75 w-1/5 mx-4 text-2xl rounded-2xl p-3 shadow-xl text-twhite flex flex-col items-start absolute ">
+    <div className="bg-mpurp opacity-75 h-52 w-1/5 mx-4 text-2xl rounded-2xl p-3 shadow-xl text-twhite flex flex-col items-start absolute ">
       
       <h1 className="mb-2">Cursos </h1>
       
       <div className="bg-dpurp">
-        <div className="overflow-hidden">
-          <div key={currentSlide} className="slide flex items-center">
-            <img
-              className="w-1/3 h-fit rounded-2xl mr-3"
-              src={courseList[currentSlide].imagen}
-              alt="course image"
-            />
+        
+          <div key={currentSlide} className="flex items-center">
+            
+            <div className="w-2/3">
+              <img
+                className="rounded-2xl mr-3 "
+                src={courseList[currentSlide].imagen}
+                alt="course image"
+              />
+            </div>
 
-            <div className="flex flex-col w-full">
-              <div className="h-2/3">
-                <h2 className="text-left font-bold text-xl">
+            <div className="w-full">
+              <div className="h-1/2 bg-twhite flex items-center">
+                <h2 className="text-left font-bold text-xl overflow-hidden h-full">
                   {courseList[currentSlide].title}
                 </h2>
               </div>
 
-              <div className="h-1/3 align text-right">
+              <div className="h-1/2 align text-right bg-mpurp">
                 <p className="text-base">
                   Prof. {courseList[currentSlide].prof}
                 </p>
@@ -73,10 +76,9 @@ export default function Course() {
               </div>
             </div>
           </div>
-        </div>
       </div>
 
-      <div className="flex bg-dpurp">
+      <div className="flex justify-between">
         <div onClick={prevSlide}>
           <BsChevronCompactLeft size={30} />
         </div>
