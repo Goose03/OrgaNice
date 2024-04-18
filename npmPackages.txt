@@ -1,2 +1,3 @@
 progress bar: npm install --save react-circular-progressbar
 popup: npm install reactjs-popup --save
+course swiper: npm install react-icons --save
