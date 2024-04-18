@@ -46,12 +46,7 @@ export default function Course() {
     <div className="bg-dpurp opacity-75 w-1/5 mx-4 text-2xl h-2/6 rounded-2xl p-3 shadow-xl text-twhite flex flex-col items-start absolute top-4 right-0">
       <h1 className="mb-2">Cursos </h1>
       <div
-        className="slider"
-        // style={{
-        //   // transform: `translateX(-${currentSlide * (100 / courseList.length)}%)`, // Original)
-
-        // }}
-      >
+        className="slider">
         {/* Render */}
         <div className="slider-container relative overflow-hidden">
           <div key={currentSlide} className="slide flex items-center">
@@ -60,11 +55,11 @@ export default function Course() {
               src={courseList[currentSlide].imagen}
               alt="course image"
             />
-            <div className="flex flex-col max-w-2/3">
-              <h2 className="text-left font-bold text-xl">
+            <div className="flex flex-col w-2/3">
+              <h2 className="text-left font-bold text-xl h-10">
                 {courseList[currentSlide].title}
               </h2>
-              <p className="text-right text-base">
+              <p className="text-right text-base h-10">
                 Prof. {courseList[currentSlide].prof}
               </p>
               <p className="text-right text-sm font-semibold">
