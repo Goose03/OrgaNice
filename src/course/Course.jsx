@@ -43,44 +43,51 @@ export default function Course() {
   };
 
   return (
-    <div className="bg-dpurp opacity-75 w-1/5 mx-4 text-2xl h-2/6 rounded-2xl p-3 shadow-xl text-twhite flex flex-col items-start absolute top-4 right-0">
+    <div className="bg-mpurp opacity-75 h-52 w-1/5 mx-4 text-2xl rounded-2xl p-3 shadow-xl text-twhite flex flex-col items-start absolute ">
+      
       <h1 className="mb-2">Cursos </h1>
-      <div
-        className="slider">
-        {/* Render */}
-        <div className="slider-container relative overflow-hidden">
-          <div key={currentSlide} className="slide flex items-center">
-            <img
-              className="w-1/3 h-fit rounded-2xl mr-3"
-              src={courseList[currentSlide].imagen}
-              alt="course image"
-            />
-            <div className="flex flex-col w-2/3">
-              <h2 className="text-left font-bold text-xl h-10">
-                {courseList[currentSlide].title}
-              </h2>
-              <p className="text-right text-base h-10">
-                Prof. {courseList[currentSlide].prof}
-              </p>
-              <p className="text-right text-sm font-semibold">
-                Código: {courseList[currentSlide].codigoClase}
-              </p>
+      
+      <div className="bg-dpurp">
+        
+          <div key={currentSlide} className="flex items-center">
+            
+            <div className="w-2/3">
+              <img
+                className="rounded-2xl mr-3 "
+                src={courseList[currentSlide].imagen}
+                alt="course image"
+              />
+            </div>
+
+            <div className="w-full">
+              <div className="h-1/2 bg-twhite flex items-center">
+                <h2 className="text-left font-bold text-xl overflow-hidden h-full">
+                  {courseList[currentSlide].title}
+                </h2>
+              </div>
+
+              <div className="h-1/2 align text-right bg-mpurp">
+                <p className="text-base">
+                  Prof. {courseList[currentSlide].prof}
+                </p>
+                <p className="text-sm font-semibold">
+                  Código: {courseList[currentSlide].codigoClase}
+                </p>
+              </div>
             </div>
           </div>
+      </div>
+
+      <div className="flex justify-between">
+        <div onClick={prevSlide}>
+          <BsChevronCompactLeft size={30} />
+        </div>
+
+        <div onClick={nextSlide}>
+          <BsChevronCompactRight size={30} />
         </div>
       </div>
-      <div
-        className="absolute top-[65%] -translate-x-0 translate-y-[50%] left-5 text-2xl rounded-full drop-shadow-lg p-2 bg-black/20 text-twhite cursor-pointer"
-        onClick={prevSlide}
-      >
-        <BsChevronCompactLeft size={30} />
-      </div>
-      <div
-        className="absolute top-[65%] -translate-x-0 translate-y-[50%] right-5 text-2xl rounded-full drop-shadow-lg p-2 bg-black/20 text-twhite cursor-pointer"
-        onClick={nextSlide}
-      >
-        <BsChevronCompactRight size={30} />
-      </div>
     </div>
+      
   );
 }
