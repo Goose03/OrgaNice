@@ -15,7 +15,7 @@ export default function Course() {
     },
     {
       imagen: img_2,
-      title: "Construcción Software",
+      title: "Construcción de Software",
       prof: "Axel",
       codigoClase: "CS",
     },
@@ -24,11 +24,10 @@ export default function Course() {
       title: "arte",
       prof: "moises",
       codigoClase: "ARTE",
-    }
+    },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
-
 
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => {
@@ -44,38 +43,48 @@ export default function Course() {
 
   return (
     <div className="bg-mpurp opacity-75 h-52 w-1/5 mx-4 text-2xl rounded-2xl p-3 shadow-xl text-twhite flex flex-col items-start absolute ">
-      
       <h1 className="mb-2">Cursos </h1>
-      
-      <div className="bg-dpurp">
-        
-          <div key={currentSlide} className="flex items-center">
-            
-            <div className="w-2/3">
-              <img
-                className="rounded-2xl mr-3 "
-                src={courseList[currentSlide].imagen}
-                alt="course image"
-              />
-            </div>
+      {/* //elements div */}
+      <div className="relative h-2/3 flex items-start">
+        {/* //image */}
+        <div className="w-1/2 flex items-end">
+          <img
+            className="rounded-2xl w-3/4 h-auto"
+            src={courseList[currentSlide].imagen}
+            alt="course image"
+          />
+        </div>
 
-            <div className="w-full">
-              <div className="h-1/2 bg-twhite flex items-center">
-                <h2 className="text-left font-bold text-xl overflow-hidden h-full">
-                  {courseList[currentSlide].title}
-                </h2>
-              </div>
-
-              <div className="h-1/2 align text-right bg-mpurp">
-                <p className="text-base">
-                  Prof. {courseList[currentSlide].prof}
-                </p>
-                <p className="text-sm font-semibold">
-                  Código: {courseList[currentSlide].codigoClase}
-                </p>
-              </div>
-            </div>
+        {/* Right side containing the heading and unordered list */}
+        <div className="w-1/2 flex flex-col justify-between items-end">
+          {/* Div for the heading */}
+          <div>
+            {" "}
+            {/* Reduced margin bottom */}
+            <h2 className="text-white text-xl font-semibold">
+              {courseList[currentSlide].title}
+            </h2>
           </div>
+
+          {/* Div for the unordered list */}
+          <ul className="text-white text-sm mb-1 absolute bottom-0 right-0">
+
+            {/* List item for Profesor */}
+            <li>
+              <span>Profesor : </span>
+              {courseList[currentSlide].prof}
+            </li>
+
+            {/* List item for the badge */}
+            <li className="text-right">
+              {" "}
+
+              <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-purple-900 dark:text-purple-300">
+                {courseList[currentSlide].codigoClase}
+              </span>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div className="flex justify-between">
@@ -88,6 +97,5 @@ export default function Course() {
         </div>
       </div>
     </div>
-      
   );
 }
