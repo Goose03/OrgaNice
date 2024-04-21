@@ -42,7 +42,7 @@ export default function Course() {
   };
 
   return (
-    <div className="bg-mpurp opacity-75 h-52 w-1/5 mx-4 text-2xl rounded-2xl p-3 shadow-xl text-twhite flex flex-col items-start absolute ">
+    <div className="bg-mpurp opacity-75 h-52 w-1/5 min-w-60 mx-4 text-2xl rounded-2xl p-3 shadow-xl text-twhite flex flex-col items-start absolute ">
       <h1 className="mb-2">Cursos </h1>
       {/* //elements div */}
       <div className="relative h-2/3 flex items-start">
@@ -56,12 +56,10 @@ export default function Course() {
         </div>
 
         {/* Right side containing the heading and unordered list */}
-        <div className="w-1/2 flex flex-col justify-between items-end">
+        <div className="w-1/2 flex flex-col justify-between items-end break-words">
           {/* Div for the heading */}
           <div>
-            {" "}
-            {/* Reduced margin bottom */}
-            <h2 className="text-white text-xl font-semibold">
+            <h2 className=" text-white text-xl font-semibold">
               {courseList[currentSlide].title}
             </h2>
           </div>
