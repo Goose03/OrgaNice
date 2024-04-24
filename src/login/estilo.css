@@ -5,15 +5,11 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
-body{
-    background: #313D52;
-}
-
 .navegacion{
     width: 1000px;
-    margin: 30px auto;
-    background: #fff;
+    margin: 0px auto;
+    background: #250E47;
+    width: 100%;
 }
 
 .navegacion ul{
@@ -28,19 +24,19 @@ body{
 .menu > li > a{
     display: block;
     padding: 15px 20px;
-    color: #353535;
-    font-family: 'Open sans';
+    color: #FFF4F4;
     text-decoration: none;
+    text-align: right;
 }
 
 .menu li a:hover{
-    color: #ce7d35;
+    color: #c4c4c4;
     transition: all .3s;
 }
 
 .submenu{
     position: absolute;
-    background: #333333;
+    background: #7E64BE;
     width: 120%;
     display: none;
 }
@@ -49,7 +45,6 @@ body{
     display: block;
     padding: 15px;
     color: #fff;
-    font-family: 'Open sans';
     text-decoration: none;
 }
 

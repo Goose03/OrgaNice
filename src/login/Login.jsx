@@ -1,9 +1,11 @@
 import './estilo.css';
 import Popup from 'reactjs-popup';
+import { useState } from 'react'; 
 
 export default function Login() {
+    const [showSubmenu, setShowSubmenu] = useState(false);
+
     const captura = () => {
-        // Obtener los valores de los campos de entrada
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
         
@@ -11,15 +13,23 @@ export default function Login() {
         console.log('Password:', password);
     };
 
+    const toggleSubmenu = () => {
+        setShowSubmenu(false);
+    };
+
+    const openSubmenu = () => {
+        setShowSubmenu(true);
+    };
+
     return (
         <>
             <header>
-                <nav className="navegacion">
+                <nav className="bg-dpurp">
                     <ul className="menu">
-                        <li><a href="#">Opciones</a></li>
-                        <li><a href="#">Cuenta</a>
-                            <ul className="submenu">
-                            <Popup trigger={<li><a href="#">Log in</a></li>} modal nested>
+                        <li>
+                            <a href="#"  onMouseEnter={openSubmenu} onMouseLeave={toggleSubmenu} className="block px-4 py-3 text-bwhite">Cuenta</a>
+                            <ul className={`absolute ${showSubmenu ? 'block' : 'hidden'} bg-dpurple w-full`}>
+                                <Popup trigger={<li><a href="#"  onMouseEnter={openSubmenu} onMouseLeave={toggleSubmenu} className="block px-4 py-3 bg-mpurp text-bwhite" onClick={toggleSubmenu}>Log in</a></li>} modal nested onMouseEnter={toggleSubmenu}>
                                     {close => (
                                         <div className="modal">
                                             <section className="bg-gray-50 dark:bg-gray-900">
@@ -53,8 +63,7 @@ export default function Login() {
                                         </div>
                                     )}
                                 </Popup>
-
-                                <Popup trigger={<li><a href="#">Sign in</a></li>} modal nested>
+                                <Popup trigger={<li><a href="#"  onMouseEnter={openSubmenu} onMouseLeave={toggleSubmenu} className='block px-4 py-3 bg-mpurp text-bwhite'>Sign in</a></li>} modal nested>
                                     {close => (
                                         <div className="modal">
                                             <section className="bg-gray-50 dark:bg-gray-900">
