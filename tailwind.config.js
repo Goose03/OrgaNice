@@ -2,7 +2,7 @@
 export default {
   content: [
     './**/*.{html,js}',
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./src/**/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     colors: {
@@ -21,6 +21,8 @@ export default {
       }
     }
   },
-  plugins: [],
+  plugins: [
+    require("daisyui"),
+  ],
 }
 
