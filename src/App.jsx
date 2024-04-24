@@ -1,10 +1,7 @@
-export default function App() {
+import { Route, Routes } from "react-router-dom"
 
-  return (
-    <>
-        <div className='bg-bwhite h-screen text-nanum-gothic-coding'>
-            
-        </div>
-    </>
-  )
+export default function App() {
+  return <Routes>
+    <Route></Route>
+  </Routes>
 }
