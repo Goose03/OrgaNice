@@ -25,7 +25,7 @@ export default function Login() {
         <>
             <header>
                 <nav className="bg-dpurp">
-                    <ul className="flex flex-row-reverse ">
+                    <ul className="flex flex-row-reverse">
                         <li>
                             <a href="#"  onMouseEnter={openSubmenu} onMouseLeave={toggleSubmenu} className="block px-4 py-3 text-bwhite">Cuenta</a>
                             <ul className={`absolute ${showSubmenu ? 'block' : 'hidden'} bg-dpurple w-full`}>
