@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom'
 
 import './index.css'
 
-import CoachTasks from './pages/student/goals/CoachTasks'
+import App from './App'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

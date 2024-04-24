@@ -15,7 +15,7 @@ export default function Teacher(){
     return(
         <>
             <div className="bg-dpurp p-5 h-screen">
-                <div className="flex flex-wrap">
+                <div className="flex flex-wrap justify-around">
                     {classes.map((thisClass) => {
                         return <Classes key={thisClass.id} class={thisClass} />;
                     })}
