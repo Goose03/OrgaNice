@@ -1,6 +1,8 @@
 import home from "../assets/home.png";
 import home2 from "../assets/home2.png";
 import frame1 from "../assets/frame1.png";
+import OlgaCard from "./olgaCard";
+import TextGrid from "./textGrid";
 
 export default function AboutPage() {
   return (
@@ -71,6 +73,9 @@ export default function AboutPage() {
           <div class="relative mx-auto bg-gray-900 dark:bg-gray-700 rounded-b-xl rounded-t-sm h-[17px] max-w-[351px] md:h-[21px] md:max-w-[597px]">
             <div class="absolute left-1/2 top-0 -translate-x-1/2 rounded-b-xl w-[56px] h-[5px] md:w-[96px] md:h-[8px] bg-gray-800"></div>
           </div>
+        </div>
+        <div className="items-end">
+        <OlgaCard />
         </div>
       </section>
     </>
