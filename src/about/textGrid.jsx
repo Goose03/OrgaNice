@@ -10,7 +10,7 @@ export default function TextGrid() {
               Feedback Personalizado{" "}
             </h3>
             <p className="my-2 mx-4">
-              A través del coach AI generamos feedback personalizado por tarea a
+              A través del <a className="underline decoration-sky-500">coach AI</a> generamos feedback personalizado por tarea a
               los maestros
             </p>
           </blockquote>
