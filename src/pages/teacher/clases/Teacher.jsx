@@ -20,7 +20,7 @@ export default function Teacher(){
 
     return(
         <>
-            <div className="bg-dpurp p-5 h-screen">
+            <div className="bg-dpurp p-5 h-screen text-twhite">
                 <div className="mx-5 flex justify-between">
                     <h1 className="text-4xl">Mis Clases</h1>
                     <CreateClase clases={classes}  set={setClasses}/>

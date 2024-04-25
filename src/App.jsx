@@ -3,7 +3,7 @@ import { Route, Routes, Link } from "react-router-dom"
 import AboutPage from "./pages/main/AboutPage"
 import Teacher from "./pages/teacher/clases/Teacher"
 import ClaseInfo from "./pages/teacher/tareas/ClaseInfo"
-import NotFound from "../NotFound"
+import NotFound from "./NotFound"
 
 export default function App() {
   return( 
