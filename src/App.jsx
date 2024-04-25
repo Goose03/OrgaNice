@@ -10,7 +10,7 @@ export default function App() {
   <>
     <nav>
       <ul>
-        <li><Link to="/">AboutPage</Link></li>
+        <li><Link to="/">Home</Link></li>
         <li><Link to="/teacher">Teacher</Link></li>
       </ul>
     </nav>
