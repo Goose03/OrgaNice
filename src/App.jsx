@@ -1,9 +1,9 @@
-import InfoAccordion from "./about/infoAccordion"
+import AboutPage from "./about/AboutPage"
 export default function App() {
 
   return (
     <> 
-    <InfoAccordion />
+    <AboutPage />
     </>
   )
 }

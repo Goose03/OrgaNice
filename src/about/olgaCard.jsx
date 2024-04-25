@@ -5,8 +5,8 @@ export default function OlgaCard() {
     <>
       <a
         href="#"
-        className="flex flex-col items-center justify-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-bgrey
-       dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+        className="flex flex-col items-center justify-center bg-white rounded-lg shadow md:flex-row md:max-w-xl hover:bg-bgrey
+       dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 opacity-90"
       >
         <div className="bg-dpurp w-full h-100 flex items-center justify-center rounded-lg">
           <img

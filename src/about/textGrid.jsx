@@ -3,7 +3,7 @@ import olga_Img from "../assets/olgaTransparente.png";
 export default function TextGrid() {
   return (
     <>
-      <div className="grid mb-2 w-1/2 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-4 md:grid-cols-2 bg-white dark:bg-gray-800">
+      <div className="grid mb-2 w-1/2 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-4 md:grid-cols-2 bg-white dark:bg-gray-800 opacity-90">
         <figure className="flex flex-col items-center justify-center p-4 text-center bg-white border border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-l-lg md:rounded-r-none dark:bg-gray-800 dark:border-gray-700 h-full">
           <blockquote className="max-w-2xl mx-auto mb-2 text-gray-500 lg:mb-4 dark:text-gray-400 flex-grow">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mt-4">
@@ -26,7 +26,7 @@ export default function TextGrid() {
           </figcaption>
         </figure>
         
-        <figure className="flex flex-col items-center justify-center p-4 text-center bg-white border border-gray-200 md:rounded-es-lg md:border-b-0 md:border-e dark:bg-gray-800 dark:border-gray-700 h-full">
+        <figure className="flex flex-col items-center justify-center p-4 text-center bg-white border border-gray-200 md:rounded-r-lg md:border-b-0 md:border-e dark:bg-gray-800 dark:border-gray-700 h-full">
           <blockquote className="max-w-2xl mx-auto mb-2 text-gray-500 lg:mb-4 dark:text-gray-400 flex-grow">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mt-4">
               Organizamos tus Tareas{" "}
