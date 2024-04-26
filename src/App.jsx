@@ -3,18 +3,15 @@ import { Route, Routes, Link } from "react-router-dom"
 import AboutPage from "./pages/about/AboutPage"
 import Teacher from "./pages/teacher/clases/Teacher"
 import ClaseInfo from "./pages/teacher/tareas/ClaseInfo"
-import NotFound from "./NotFound"
+import SignUp from "./pages/login/SignUp"
 
-import Login from "./login/SignUp"
+import NotFound from "./NotFound"
+import Login from "./Login"
+
 export default function App() {
   return( 
   <>
-    <nav>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/teacher">Teacher</Link></li>
-      </ul>
-    </nav>
+    <Login />
     <Routes>  
       <Route path="/" element={<AboutPage />} /> 
       <Route path="/teacher" element={<Teacher />} />
