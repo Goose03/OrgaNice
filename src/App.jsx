@@ -5,6 +5,7 @@ import Teacher from "./pages/teacher/clases/Teacher"
 import ClaseInfo from "./pages/teacher/tareas/ClaseInfo"
 import NotFound from "./NotFound"
 
+import Login from "./login/SignUp"
 export default function App() {
   return( 
   <>
