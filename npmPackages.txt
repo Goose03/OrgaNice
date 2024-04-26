@@ -1,3 +1,11 @@
+BACKEND
+mysql: npm install mysqljs/mysql
+express: npm install express
+cors: npm install cors
+
+
+COMPONENTES
 progress bar: npm install --save react-circular-progressbar
 popup: npm install reactjs-popup --save
 course swiper: npm install react-icons --save
+componentes home page: npm install flowbite
