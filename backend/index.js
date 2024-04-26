@@ -6,7 +6,7 @@
 import express from 'express';
 import cors from 'cors';
 import db from './db_connection.js';
-import {getAllUsers} from './controllers.js';
+import {getAllUsers, getTables} from './controllers.js';
 
 
 const Port = 5000;
@@ -28,5 +28,6 @@ app.get('/', (req, res) => {
 console.log(db);
 
 
-//MySQL routes 
+//MySQL routes (these functions are imported as routes from the controllers.js file)
+app.get('/tables', getTables);
 app.get('/users', getAllUsers);
