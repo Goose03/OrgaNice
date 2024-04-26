@@ -1,4 +1,4 @@
-import olga_Img from "../assets/olgaTransparente.png";
+import olga_Img from "/src/assets/olgaTransparente.png";
 
 export default function TextGrid() {
   return (
