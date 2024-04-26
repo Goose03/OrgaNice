@@ -1,4 +1,4 @@
-import Login from "./login/LoginPag"
+import Login from "./login/SignUp"
 export default function App() {
 
   return (
