@@ -36,7 +36,7 @@ export default function CreateClase(props){
                             <input maxLength="4" onChange={handleAcr} type="text" className="bg-twhite rounded-lg shadow-xl p-1"/>
                         </div>
 
-                        <button onClick={createClase} className="bg-dpurp hover:bg-dpurp/[.5] text-twhite hover:text-dpurp p-2 rounded-xl shadow-sm">          
+                        <button onClick={() => {createClase(); close();}} className="bg-dpurp hover:bg-dpurp/[.5] text-twhite hover:text-dpurp p-2 rounded-xl shadow-sm">          
                             Create        
                         </button>      
                     </div>    
