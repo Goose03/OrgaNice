@@ -6,6 +6,7 @@ export default {
   content: [
     './**/*.{html,js}',
     "./src/**/**/*.{js,jsx,ts,tsx}",
+    'node_modules/flowbite-react/lib/esm/**/*.js'
   ],
   theme: {
     colors: {
@@ -52,6 +53,7 @@ export default {
       }
     }
   },
+  plugins: [ require('flowbite/plugin')],
   plugins: [
     require("daisyui"),
   ],
