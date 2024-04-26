@@ -4,3 +4,4 @@ daisyUI: npm i -D daisyui@latest
 course swiper: npm install react-icons --save
 react router: npm install react-router-dom@6
 postcss & autoprefixer: npm install tailwindcss postcss autoprefixer -D
+flowbite: npm install flowbite

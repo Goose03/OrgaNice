@@ -1,11 +1,10 @@
 import { Route, Routes, Link } from "react-router-dom"
 
-import AboutPage from "./pages/main/AboutPage"
+import AboutPage from "./pages/about/AboutPage"
 import Teacher from "./pages/teacher/clases/Teacher"
 import ClaseInfo from "./pages/teacher/tareas/ClaseInfo"
 import NotFound from "./NotFound"
 
-import AboutPage from "./about/AboutPage"
 export default function App() {
   return( 
   <>
@@ -22,11 +21,5 @@ export default function App() {
       <Route path="*" element={<NotFound />} />
     </Routes>
   </>
-  
-
-  return (
-    <> 
-    <AboutPage />
-    </>
   )
 }

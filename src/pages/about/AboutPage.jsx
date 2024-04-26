@@ -1,6 +1,6 @@
 // assets
-import home from "../assets/home.png";
-import home2 from "../assets/home2.png";
+import home from "src/assets/home.png";
+import home2 from "src/assets/home1.png";
 
 // Componentes
 import OlgaCard from "./olgaCard";
