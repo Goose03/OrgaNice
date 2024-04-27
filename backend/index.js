@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 });
 
 //Testing MySQL connection
-console.log(db);
+// console.log(db);
 
 
 //MySQL routes (these functions are imported as routes from the controllers.js file)
