@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function LoginPag() {
     const nombres = ['Juan', 'María', 'Pedro', 'Jose'];
     const contraseñas = ['1234', '12', 'amen', 'men'];
-    
+
     const [showNegacion, setShowNegacion] = useState(false);
     const [showNegacionC, setShowNegacionC] = useState(false);
 
@@ -31,6 +31,7 @@ export default function LoginPag() {
         console.log('Email:', email);
         console.log('Password:', password);
     };
+
 
     return (
     <>
