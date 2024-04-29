@@ -32,7 +32,7 @@ app.get('/', (req, res) => {
 //MySQL routes (these functions are imported as routes from the controllers.js file)
 app.get('/tables', getTables);
 app.get('/users', getAllUsers);
-app.get('/alumno', getAlumno)
+app.get('/alumno', getAlumno);
 
 
 
