@@ -5,13 +5,16 @@
 
 import express from 'express';
 import cors from 'cors';
-import db from './db_connection.js';
 import {getAllUsers, getTables} from './controllers.js';
 
-
+//Define port
 const Port = 5000;
 
+// Initialize Express for backend server 
 const app = express();
+
+// Middleware
+app.use(cors());
 
 // Start server
 app.listen(Port, () => {
@@ -19,15 +22,14 @@ app.listen(Port, () => {
 });
 
 
-//Testing route
+//Testing route 'Hello World'
 app.get('/', (req, res) => {
     res.send('Hello World');
 });
-
-//Testing MySQL connection
-// console.log(db);
 
 
 //MySQL routes (these functions are imported as routes from the controllers.js file)
 app.get('/tables', getTables);
 app.get('/users', getAllUsers);
+
+

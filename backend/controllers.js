@@ -10,7 +10,7 @@ export const getAllUsers = (req, res) => {
       res.status(500).json({ error: "Internal server error" });
       return;
     }
-    res.json(results); 
+    res.json(results);
   });
 };
 
@@ -21,6 +21,10 @@ export const getTables = (req, res) => {
       res.status(500).json({ error: "Internal server error" });
       return;
     }
-    res.json(results); 
+    res.json(results);
   });
 };
+
+
+
+
