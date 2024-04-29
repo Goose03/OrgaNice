@@ -1,8 +1,10 @@
 // Purpose: Controller functions for the backend.
 //functions that will be called when the API endpoints are hit.
 
-import db from "./db_connection.js";
+import db from "../db_connection.js";
 
+
+//getters 
 export const getAllUsers = (req, res) => {
   db.query("SELECT * FROM users", (error, results) => {
     if (error) {
@@ -26,5 +28,5 @@ export const getTables = (req, res) => {
 };
 
 
-
+ 
 
