@@ -26,6 +26,7 @@ export default function App() {
       <Route path="/signUp" element={<SignUp />} />
       <Route path="/teacher" element={<Teacher />} />
       <Route path="/teacher/:id" element={<ClaseInfo />} />
+      <Route path="/student" element={} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   </>

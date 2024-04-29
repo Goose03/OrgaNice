@@ -11,7 +11,7 @@ export default function NavBar(){
                 
                 
                 <Popup
-                trigger={<button className="bg-mpurp text-mpurp h-1/2 rounded-full text-center">...........</button>}
+                trigger={<button className="bg-mpurp text-mpurp h-1/2 rounded-full text-center">............</button>}
                 position={'bottom center'}
                 on={['hover', 'focus']}
                 >
