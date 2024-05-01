@@ -2,36 +2,31 @@ import { useState } from 'react';
 import { Link } from "react-router-dom";
 
 export default function LoginPag() {
-    const nombres = ['Juan', 'María', 'Pedro', 'Jose'];
-    const contraseñas = ['1234', '12', 'amen', 'men'];
+    
+    const [loggedIn, setLoggedIn] = useState(false);
+
+    const [path, setPath] = useState('login');
 
     const [showNegacion, setShowNegacion] = useState(false);
-    const [showNegacionC, setShowNegacionC] = useState(false);
 
-    const captura = () => {
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
+    const [user, setUser] = useState('');
+    const [password, setPassword] = useState('');
 
-        if (nombres.includes(email)) {
-            console.log('El nombre ya está en la lista');
-            setShowNegacion(false);
-        } else {
-            console.log('El nombre no está en la lista');
+    const handleUser = (event) => {setUser(event.target.value)};
+    const handlePasswrod = (event) => {setPassword(event.target.value)};
+
+    function checkCredentials(){
+        const userCheck = "Juan"
+        const passCheck = "1234"
+        
+        if(user == userCheck && password == passCheck){
+            console.log("Acces");
+        }
+        else{
+            console.log("Denied");
             setShowNegacion(true);
         }
-
-        if (contraseñas.includes(password)) {
-            console.log('La contraseña está en la lista');
-            setShowNegacionC(false);
-        } else {
-            console.log('La contraseña no está en la lista');
-            setShowNegacionC(true);
-        }
-
-        console.log('Email:', email);
-        console.log('Password:', password);
-    };
-
+    }
 
     return (
     <>
@@ -44,21 +39,20 @@ export default function LoginPag() {
                         </h1>
                         <form className="space-y-4 md:space-y-6" action="#">
                             <div>
-                                <label htmlFor="email" className="block mb-2 text-sm font-medium text-bwhite dark:text-white">Username 
-                                <a className={`${showNegacion ? 'block' : 'hidden'} text-dpurp `}>Este username no esta registrado</a>
-                                </label>
-                                <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John_Shmit" required=""/>
+                                <a className={`${showNegacion ? 'block' : 'hidden'} text-dpurp mb-2`}>User o Password Incorrectos!</a>
+                                <label htmlFor="email" className="block mb-2 text-sm font-medium text-bwhite dark:text-white">Username </label>
+                                <input onChange={handleUser}  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John_Shmit" required/>
                             </div>
+
                             <div>
-                                <label htmlFor="password" className="block mb-2 text-sm font-medium text-bwhite dark:text-white">Password
-                                <a className={`${showNegacionC ? 'block' : 'hidden'} text-dpurp `}>Esta contraseña no esta registrada</a>
-                                </label>
-                                <input type="password" name="password" id="password" placeholder="123456" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""/>
+                                <label htmlFor="password" className="block mb-2 text-sm font-medium text-bwhite dark:text-white">Password</label>
+                                <input type="password" onChange={handlePasswrod} placeholder="123456" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
                             </div>
-                            <div className="flex items-center justify-between">
-                                <a href="#" className="text-sm font-medium text-primary-600 hover:underline dark:text-dpurp">Forgot password?</a>
+
+                            <div  className="w-full text-bwhite bg-mpurp hover:bg-dpurp focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
+                                <Link to={`/${path}`}  >Log in</Link>
                             </div>
-                            <button type="button" className="w-full text-bwhite bg-mpurp hover:bg-dpurp focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" onClick={captura}>Log in</button>
+
                             <p className="text-sm font-light text-twhite dark:text-bwhite">
                                 No tienes cuenta? <Link to={"/signUp"}  className="font-medium text-primary-600 hover:underline dark:text-dpurp">Crea Una</Link>
                             </p>

@@ -22,7 +22,7 @@ export default function Tarea(props){
         event.preventDefault();
         
         if(tareaObj.prop.clase == 'pers'){
-            console.log('Tarea Completada!')
+            console.log('Tarea Completada!');
         }
         else{
             console.log(retro);

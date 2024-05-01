@@ -43,7 +43,7 @@ export default function ToDo(){
 
     return(
         <>
-            <div className="bg-mpurp opacity-75 w-3/4 text-2xl rounded-2xl p-3 text-twhite overflow-x-auto">
+            <div className="bg-mpurp opacity-75 md:w-3/4 lg:w-1/2 text-2xl rounded-2xl p-3 text-twhite overflow-x-auto">
                 <div className="flex justify-between">
                     <p>Tareas</p>
                     <Popup

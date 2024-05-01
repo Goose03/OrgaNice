@@ -50,6 +50,9 @@ export default {
     extend: {
       fontFamily: {
         'nanum-gothic-coding': ["Nanum Gothic Coding", "monospace"],
+      },
+      backgroundImage: {
+        'bgEstudiante': "url('src/assets/bgEstudiante.png')",
       }
     }
   },

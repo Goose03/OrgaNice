@@ -14,10 +14,6 @@ export default function Teacher(){
     
     const [classes, setClasses] = useState(dummyClass);
 
-    useEffect(() => {
-        console.log(classes);
-    }, [classes]);
-
     return(
         <>
             <div className="bg-dpurp p-5 h-screen text-twhite">
