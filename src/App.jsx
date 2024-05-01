@@ -14,12 +14,14 @@ import { useState } from "react"
 
 export default function App() {
 
+  const [tipo, setTipo] = useState(0);
+
   return( 
   <>
     <NavBar />
     <Routes>  
       <Route path="/" element={<AboutPage />} /> 
-      <Route path="/login" element={<Login />} />
+      <Route path="/login" element={tipo == 1 ? <Student /> : tipo == 2 ? <Teacher /> : <Login tipo={setTipo} /> } />
       <Route path="/signUp" element={<SignUp />} />
       <Route path="/teacher" element={<Teacher />} />
       <Route path="/teacher/:id" element={<ClaseInfo />} />
