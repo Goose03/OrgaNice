@@ -1,10 +1,35 @@
 import Popup from 'reactjs-popup';
-import 'ldrs/ripples'
+import 'ldrs/ripples';
+import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
+import { useState } from 'react';
 
 export default function TareaDesc(props){
 
-    return(
-        <>
+    const [feedback, setFeedback] = useState('Holiwis');
+
+    const styles = StyleSheet.create({
+        page: {
+          flexDirection: 'row',
+          backgroundColor: '#E4E4E4'
+        },
+        section: {
+          margin: 10,
+          padding: 10,
+          flexGrow: 1
+        }
+      });
+
+    const MyDocument = () => (
+        <Document>
+            <Page size="A4" style={styles.page}>
+                <View style={styles.section}>
+                    <Text>{feedback}</Text>
+                </View>
+            </Page>
+        </Document>
+      );
+      return(
+          <>
             <div className="flex justify-between bg-bwhite/[.60] p-5 m-5 rounded-lg text-dpurp">
                 <div className="">
                     <h1>{props.tarea.nombre}</h1>
@@ -14,26 +39,10 @@ export default function TareaDesc(props){
                 </div>
 
                 <div className={`border-2 border-dpurp ${props.tarea.cantEntre / props.cantAlu > 0.2 ? 'hover:bg-dpurp/30' : ''} flex justify-center p-2 rounded-lg`}>
-                    <Popup
-                        trigger={
-                            <button disabled={((props.tarea.cantEntre / props.cantAlu) > 0.2) ? false : true } >
-                                <p>Obtener Retro</p>
-                                <p>{Math.floor(props.tarea.cantEntre / props.cantAlu * 100)}%</p>
-                            </button>
-                        }
-                        modal
-                    >
-                        <div className='bg-mpurp border-2 border-dpurp/50 text-twhite p-5 flex flex-col justify-center items-center rounded-lg'>
-                            <p>Creando Retro</p>
-                            <div className='p-2 w-fit'>
-                                <l-ripples
-                                size="45"
-                                speed="2"
-                                color="white"
-                                ></l-ripples>
-                            </div>
-                        </div>
-                    </Popup>
+                    <button disabled={((props.tarea.cantEntre / props.cantAlu) > 0.2) ? false : true } >
+                        <p>Obtener Retro</p>
+                        <p>{Math.floor(props.tarea.cantEntre / props.cantAlu * 100)}%</p>
+                    </button>
                 </div>
             </div>
         </>

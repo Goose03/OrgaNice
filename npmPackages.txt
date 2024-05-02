@@ -13,3 +13,4 @@ react router: npm install react-router-dom@6
 postcss & autoprefixer: npm install tailwindcss postcss autoprefixer -D
 flowbite: npm install flowbite
 copy to clipboard: npm install --save react-copy-to-clipboard
+react loaders: npm install ldrs
