@@ -5,11 +5,11 @@
 
 import express from 'express';
 import cors from 'cors';
-import {getAllUsers, getTables, getEstudianteId} from './endpoint_handlers/test_endpoint.js';
-
+import {getAllUsers, getTables, createUser} from './endpoint_handlers/test_endpoint.js';
+// import {getEstudianteId} from './endpoint_handlers/estudianteID.js';
 
 //Define port
-const Port = 5000;
+const Port = 3000;
 
 // Initialize Express for backend server 
 const app = express();
@@ -29,8 +29,10 @@ app.get('/', (req, res) => {
 });
 
 
-//MySQL routes (these functions are imported as routes from the controllers.js file)
+// //MySQL routes (these functions are imported as routes from the controllers.js file)
 app.get('/tables', getTables);
 app.get('/users', getAllUsers);
 
-app.get('/estudianteID', getEstudianteId)  //estudianteID?estudianteName=
+// app.get('/estudianteID', getEstudianteId)  //estudianteID?estudianteName=
+
+app.post('/createUser', createUser); //createUser?name=Moi
