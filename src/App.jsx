@@ -6,7 +6,6 @@ import ClaseInfo from "./pages/teacher/tareas/ClaseInfo"
 import Login from "./pages/login/Login"
 import SignUp from "./pages/login/SignUp"
 import Student from "./pages/student/Student"
-import UserSite from "./UserSite"
 
 import NotFound from "./NotFound"
 import NavBar from "./NavBar"
