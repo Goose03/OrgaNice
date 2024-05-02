@@ -4,13 +4,12 @@
 // index.js file calls the connection and routes the requests to the controllers.js file
 
 import mysql from 'mysql';
-
 // MySQL Connection
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    // password: '',
-    database: 'testconnectionjs'
+    password: 'root',
+    database: 'organice'
 });
 
 db.connect((err) => {
@@ -22,7 +21,7 @@ db.connect((err) => {
 });
 
 //Test query obtained from the MySQL documentation
-db.query('SELECT 1 + 1 AS solution', (error, results, fields) => {
+db.query('SELECT 1 + 1 AS solution', (error, results) => {
     if (error) {
         console.error('Error executing MySQL query:', error);
         return;

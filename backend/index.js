@@ -5,7 +5,8 @@
 
 import express from 'express';
 import cors from 'cors';
-import {getAllUsers, getTables, getEstudianteId} from './endpoint_handlers/test_endpoint.js';
+import {getEstudianteId} from './endpoint_handlers/estudiante.js';
+import {getAllStudents, getTables} from './endpoint_handlers/test_endpoint.js';
 
 
 //Define port
@@ -31,6 +32,6 @@ app.get('/', (req, res) => {
 
 //MySQL routes (these functions are imported as routes from the controllers.js file)
 app.get('/tables', getTables);
-app.get('/users', getAllUsers);
+app.get('/students', getAllStudents);
 
 app.get('/estudianteID', getEstudianteId)  //estudianteID?estudianteName=

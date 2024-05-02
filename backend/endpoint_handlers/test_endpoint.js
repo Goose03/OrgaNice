@@ -5,8 +5,8 @@ import db from "../db_connection.js";
 
 
 //getters 
-export const getAllUsers = (req, res) => {
-  db.query("SELECT * FROM users", (error, results) => {
+export const getAllStudents = (req, res) => {
+  db.query("SELECT * FROM estudiantes", (error, results) => {
     if (error) {
       console.error("Error fetching users:", error);
       res.status(500).json({ error: "Internal server error" });
@@ -17,7 +17,7 @@ export const getAllUsers = (req, res) => {
 };
 
 export const getTables = (req, res) => {
-  db.query("SHOW TABLES", (error, results, fields) => {
+  db.query("SHOW TABLES", (error, results) => {
     if (error) {
       console.error("Error fetching tables:", error);
       res.status(500).json({ error: "Internal server error" });
