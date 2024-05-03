@@ -5,8 +5,10 @@
 
 import express from 'express';
 import cors from 'cors';
-import {getAllUsers, getTables, createUser} from './endpoint_handlers/test_endpoint.js';
-// import {getEstudianteId} from './endpoint_handlers/estudianteID.js';
+import {getTables} from './endpoint_handlers/test_endpoint.js';
+import {createEstudiante,getEstudianteId, getClaseEstudiante, deleteEstudiante} from './endpoint_handlers/estudiante.js';
+import { getTareasEstudiante, patchTareaComp} from './endpoint_handlers/tarea.js';
+import { postInscribirClase } from './endpoint_handlers/clase.js';
 
 //Define port
 const Port = 3000;
@@ -31,8 +33,17 @@ app.get('/', (req, res) => {
 
 // //MySQL routes (these functions are imported as routes from the controllers.js file)
 app.get('/tables', getTables);
-app.get('/users', getAllUsers);
 
-// app.get('/estudianteID', getEstudianteId)  //estudianteID?estudianteName=
 
-app.post('/createUser', createUser); //createUser?name=Moi
+//Estudiante routes
+app.get('/createEstudiante', createEstudiante); //createEstudiante?name=Moi&contraseina=password
+app.get('/estudianteID', getEstudianteId)  //estudianteID?estudianteName=
+app.get('/claseEstudiante', getClaseEstudiante); //claseEstudiante?id=000000000X
+app.get('/deleteEstudiante', deleteEstudiante); //http://localhost:3000/deleteEstudiante?id=000000000X
+
+//Tarea routes
+app.get('/tareasEstudiante', getTareasEstudiante); //tareasEstudiante?id=000000000X
+app.get('/patchTareaComp', patchTareaComp); //patchTareaComp?est_id=000000000X&hw_id=000000000X
+
+//Clase routes
+app.get('/postInscribirClase', postInscribirClase); //postInscribirClase?est_id=000000000X&clase_id=000000000X
