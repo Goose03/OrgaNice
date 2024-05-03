@@ -2,6 +2,7 @@
 //functions that will be called when the API endpoints are hit.
 
 import db from "../db_connection.js";
+import axios from 'axios';
 
 
 //getters 
@@ -28,5 +29,25 @@ export const getTables = (req, res) => {
 };
 
 
- 
+export async function createUser(req, res) {
+  try {
+    // Datos del usuario a enviar
+    const userData = req.body;
+
+    // URL de la API donde se enviará el dato
+    const apiUrl = 'http://localhost:3000'; // Cambiar al puerto y ruta correctos de tu servidor de Node.js
+
+    // Realizar la solicitud POST utilizando Axios
+    const response = await axios.post(apiUrl, userData);
+
+    // Devolver la respuesta del servidor
+    res.json(response.data);
+  } catch (error) {
+    // Manejar errores
+    console.error('Error al enviar datos:', error);
+    res.status(500).json({ error: 'Error al enviar datos al servidor' });
+  }
+}
+
+
 
