@@ -15,7 +15,7 @@ OrgaNice is aimed at empowering both students and teachers by addressing the pri
 
 
 ## Main activities
-<img src="src/assets/main_activities_Organice.jpg" alt="Main activites" width= "500"/>
+<img src="src/assets/main_activities_Organice.jpg" alt="Main activites"/>
 
 ## Key Features
 
@@ -48,7 +48,7 @@ Developed by Google, Gemini 1.5 Pro enhances the AI capabilities of Olga, ensuri
 
 ## Prompts for Easy Understanding
 
-<img src="src/assets/prompt.jpg" alt="Prompt example" width= "500"/>
+<img src="src/assets/prompt.jpg" alt="Prompt example"/>
 (The provided information can be easily translated and organized for improved clarity and comprehension, tailored to the desired language of the generated report.)
 
 
