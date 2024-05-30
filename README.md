@@ -1,14 +1,19 @@
-# OrgaNice
+# OrgaNice 
+
+## (The finished project was moved to a new repository. For running the app follow -> **https://github.com/Goose03/OrgaNice2**)
 
 OrgaNice is a web application designed to maximize your **Organization** and **Communication with your teachers**. With Olga, our **AI Coach**, we create personalized tasks tailored to your specific goals and provide **personalized feedback** to your teachers about the tasks you are working on.
-
-![Main activities](src/assets/main_activities_Organice.jpg)
+![Preview](src/assets/homePage_preview.png)
 
 ## Overview
 
 OrgaNice is aimed at empowering both students and teachers by addressing the primary issues of inconsistency and the communication gap. Our practical solution involves personalized task creation and an efficient feedback system.
 
 ![OrgaNice Logo](images/logo.png)
+
+
+## Main activities
+![Main activities](src/assets/main_activities_Organice.jpg)
 
 ## Key Features
 
@@ -48,25 +53,25 @@ Developed by Google, Gemini 1.5 Pro enhances the AI capabilities of Olga, ensuri
 ![Stack utilized](src/assets/stackOverview.jpg)
 
 ## Getting Started
-**This project was moved to a new repository. For running the app follow ->** https://github.com/Goose03/OrgaNice2
+**The finished project was moved to a new repository. For running the app follow ->** https://github.com/Goose03/OrgaNice2
 
 To get started with OrgaNice, follow these steps:
 
-1. **Clone the repository**:
+1. **Clone the (UPDATED) repository**:
    ```sh
-   git clone https://github.com/yourusername/organice.git
+   git clone https://github.com/yourusername/OrgaNice2
    ```
 2. **Navigate to the project directory**:
    ```sh
    cd organice
    ```
-3. **Install the required dependencies**:
+3. **Install the required dependencies using**:
    ```sh
    npm install
    ```
 4. **Start the application**:
    ```sh
-   npm start
+   npm run dev
    ```
 
 
