@@ -27,9 +27,8 @@ Olga, our AI Coach, generates tasks centered around your individual goals, ensur
 
 ### Feedback System
 
-Provides personalized feedback to your teachers about your progress and the tasks you are working on.
+Provides *personalized feedback* to your teachers about your progress and the tasks you are working on.
 
-![Feedback System](images/feedback_system.png)
 
 ### Gemini 1.5 Pro Integration
 
@@ -44,7 +43,6 @@ Developed by Google, Gemini 1.5 Pro enhances the AI capabilities of Olga, ensuri
 2. **Create Feedback Text File**: Generates a text file with the feedback received.
 3. **New Feedback File**: A new text file is created every time the teacher requests feedback.
 
-![Feedback Process](images/feedback_process.png)
 
 ## Prompts for Easy Understanding
 
