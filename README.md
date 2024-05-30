@@ -23,7 +23,7 @@ OrgaNice is aimed at empowering both students and teachers by addressing the pri
 
 Olga, our AI Coach, generates tasks centered around your individual goals, ensuring that your learning experience is tailored to your needs.
 
-![Task Creation](src/assets/olgaTransparente.png)
+<img src="src/assets/olgaTransparente.png" alt="OrgaNice Logo" width="200"/>
 
 ### Feedback System
 
