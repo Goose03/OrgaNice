@@ -3,13 +3,15 @@
 ## (The finished project was moved to a new repository. For running the app follow -> **https://github.com/Goose03/OrgaNice2**)
 
 OrgaNice is a web application designed to maximize your **Organization** and **Communication with your teachers**. With Olga, our **AI Coach**, we create personalized tasks tailored to your specific goals and provide **personalized feedback** to your teachers about the tasks you are working on.
-![Preview](src/assets/homePage_preview.png)
+
+![OrgaNice Logo](src/assets/logoOrgaNice.png)
 
 ## Overview
 
 OrgaNice is aimed at empowering both students and teachers by addressing the primary issues of inconsistency and the communication gap. Our practical solution involves personalized task creation and an efficient feedback system.
 
-![OrgaNice Logo](images/logo.png)
+
+![Preview](src/assets/homePage_preview.png)
 
 
 ## Main activities
