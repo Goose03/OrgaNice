@@ -44,7 +44,7 @@ Developed by Google, Gemini 1.5 Pro enhances the AI capabilities of Olga, ensuri
 (The provided information can be easily translated and organized for improved clarity and comprehension, tailored to the desired language of the generated report.)
 
 
-##Our stack 
+## Our stack 
 ![Stack utilized](src/assets/stackOverview.jpg)
 
 ## Getting Started
