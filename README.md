@@ -48,7 +48,7 @@ Developed by Google, Gemini 1.5 Pro enhances the AI capabilities of Olga, ensuri
 ![Stack utilized](src/assets/stackOverview.jpg)
 
 ## Getting Started
-**This project was moved to a new repository. For running the app follow ->** https://github.com/Goose03/OrgaNice2 
+**This project was moved to a new repository. For running the app follow ->** https://github.com/Goose03/OrgaNice2
 
 To get started with OrgaNice, follow these steps:
 
@@ -73,11 +73,5 @@ To get started with OrgaNice, follow these steps:
 ---
 
 For any questions or further information, feel free to contact us at [support@organice.com](mailto:support@organice.com).
-
----
-
-### Note
-
-Replace the placeholder image paths (`images/logo.png`, `images/task_creation.png`, etc.) with the actual paths to your images in the project directory.
 
 ---
